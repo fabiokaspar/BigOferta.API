@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BigOferta.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("bowebapi/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {

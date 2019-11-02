@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BigOferta.API.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class RefactoredEntities : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -46,7 +46,13 @@ namespace BigOferta.API.Migrations
                     DateOfBirth = table.Column<DateTime>(nullable: false),
                     Created = table.Column<DateTime>(nullable: false),
                     City = table.Column<string>(nullable: true),
-                    Country = table.Column<string>(nullable: true)
+                    Country = table.Column<string>(nullable: true),
+                    State = table.Column<string>(nullable: true),
+                    Street = table.Column<string>(nullable: true),
+                    District = table.Column<string>(nullable: true),
+                    Number = table.Column<string>(nullable: true),
+                    ReputationGrade = table.Column<int>(nullable: false),
+                    CardNumber = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -183,25 +189,20 @@ namespace BigOferta.API.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    Capacity = table.Column<int>(nullable: false),
+                    DateOfPurchase = table.Column<DateTime>(nullable: false),
                     TotalPrice = table.Column<double>(nullable: false),
-                    Street = table.Column<string>(nullable: true),
-                    Neighbourhood = table.Column<string>(nullable: true),
-                    HomeNumber = table.Column<string>(nullable: true),
-                    AddressComplement = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    Country = table.Column<string>(nullable: true),
-                    OrderDate = table.Column<DateTime>(nullable: false),
-                    UserId = table.Column<int>(nullable: false)
+                    ClientId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PurchaseOrders", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PurchaseOrders_AspNetUsers_UserId",
-                        column: x => x.UserId,
+                        name: "FK_PurchaseOrders_AspNetUsers_ClientId",
+                        column: x => x.ClientId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -239,7 +240,7 @@ namespace BigOferta.API.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Url = table.Column<string>(nullable: true),
-                    isMain = table.Column<bool>(nullable: false),
+                    IsMain = table.Column<bool>(nullable: false),
                     PublicId = table.Column<string>(nullable: true),
                     OfferId = table.Column<int>(nullable: true),
                     UserId = table.Column<int>(nullable: true)
@@ -267,7 +268,7 @@ namespace BigOferta.API.Migrations
                 {
                     UserId = table.Column<int>(nullable: false),
                     OfferId = table.Column<int>(nullable: false),
-                    RequestedAmount = table.Column<int>(nullable: false)
+                    Amount = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -345,10 +346,9 @@ namespace BigOferta.API.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_PurchaseOrders_UserId",
+                name: "IX_PurchaseOrders_ClientId",
                 table: "PurchaseOrders",
-                column: "UserId",
-                unique: true);
+                column: "ClientId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserOffers_OfferId",

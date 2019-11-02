@@ -17,13 +17,13 @@ namespace BigOferta.API.Dtos
         [StringLength(50, MinimumLength=6, ErrorMessage="A senha deve conter entre 6 e 50 caracteres")]
         public string Password { get; set; }
         
-        [Required]
+        // [Required]
         public DateTime DateOfBirth { get; set; }
         
-        [Required]
+        // [Required]
         public string City { get; set; }
         
-        [Required]
+        // [Required]
         public string Country { get; set; }
 
         public DateTime Created { get; set; }

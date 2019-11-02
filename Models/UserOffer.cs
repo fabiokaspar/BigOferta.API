@@ -11,6 +11,6 @@ namespace BigOferta.API.Models
         [ForeignKey("OfferId")]
         public int OfferId { get; set; }
         public virtual Offer Offer { get; set; }
-        public int RequestedAmount { get; set; }
+        public int Amount { get; set; }
     }
 }

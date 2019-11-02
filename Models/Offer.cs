@@ -11,9 +11,9 @@ namespace BigOferta.API.Models
         public string Advertiser { get; set; }
         public double Price { get; set; }
         public bool IsHanked { get; set; }
-        public virtual ICollection<Photo> Album { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
         // users que adicionaram a oferta ao seu carrinho
-        public virtual ICollection<UserOffer> InterestedUsers { get; set; }
+        public virtual ICollection<UserOffer> Interesteds { get; set; }
         public virtual ICollection<Message> Feedbacks { get; set; }
     }
 }

@@ -89,7 +89,7 @@ namespace BigOferta.API.Controllers
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(1),
+                Expires = DateTime.Now.AddHours(2),
                 SigningCredentials = creds
             };
 

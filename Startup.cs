@@ -50,6 +50,7 @@ namespace BigOferta.API
                 opt.Password.RequiredLength = 6;
                 opt.Password.RequireNonAlphanumeric = false;
                 opt.Password.RequireUppercase = false;
+                opt.Password.RequireLowercase = false;
             });
 
             builder = new IdentityBuilder(builder.UserType, typeof(Role), builder.Services);

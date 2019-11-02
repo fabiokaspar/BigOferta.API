@@ -15,8 +15,9 @@ namespace BigOferta.API.Data
         public DbSet<Message> Messages { get; set; }
         public DbSet<Offer> Offers { get; set; }
         public DbSet<Photo> Photos { get; set; }
-        public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
+        // public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
         public DbSet<UserOffer> UserOffers { get; set; }
+        public DbSet<PurchaseOrder<UserOffer>> PurchaseOrders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -49,7 +50,7 @@ namespace BigOferta.API.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Offer>()
-                .HasMany(o => o.Album)
+                .HasMany(o => o.Photos)
                 .WithOne(p => p.Offer)
                 .HasForeignKey(p => p.OfferId);
 
@@ -58,21 +59,21 @@ namespace BigOferta.API.Data
                 .WithOne(p => p.User)
                 .HasForeignKey<Photo>(p => p.UserId);
       
-            builder.Entity<PurchaseOrder>()
-                .HasOne(po => po.User)
-                .WithOne(u => u.PurchaseOrder)
-                .HasForeignKey<PurchaseOrder>(po => po.UserId);
+            // builder.Entity<PurchaseOrder<UserOffer>>()
+            //     .HasOne(po => po.Client)
+            //     .WithOne(u => u.CartOffers)
+            //     .HasForeignKey<PurchaseOrder<UserOffer>>(po => po.ClientId);
 
             builder.Entity<UserOffer>(userOffer => {
                 userOffer.HasKey(uf => new { uf.UserId, uf.OfferId });
 
                 userOffer.HasOne(uf => uf.User)
-                    .WithMany(u => u.OffersCart)
+                    .WithMany(u => u.CartOffers)
                     .HasForeignKey(uf => uf.UserId)
                     .IsRequired();
 
                 userOffer.HasOne(uf => uf.Offer)
-                    .WithMany(o => o.InterestedUsers)
+                    .WithMany(of => of.Interesteds)
                     .HasForeignKey(uf => uf.OfferId)
                     .IsRequired();
             });

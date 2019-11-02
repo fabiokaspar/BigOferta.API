@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BigOferta.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191029025320_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20191102141259_RefactoredEntities")]
+    partial class RefactoredEntities
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -67,6 +67,8 @@ namespace BigOferta.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<bool>("IsMain");
+
                     b.Property<int?>("OfferId");
 
                     b.Property<string>("PublicId");
@@ -74,8 +76,6 @@ namespace BigOferta.API.Migrations
                     b.Property<string>("Url");
 
                     b.Property<int?>("UserId");
-
-                    b.Property<bool>("isMain");
 
                     b.HasKey("Id");
 
@@ -87,33 +87,22 @@ namespace BigOferta.API.Migrations
                     b.ToTable("Photos");
                 });
 
-            modelBuilder.Entity("BigOferta.API.Models.PurchaseOrder", b =>
+            modelBuilder.Entity("BigOferta.API.Models.PurchaseOrder<BigOferta.API.Models.UserOffer>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("AddressComplement");
+                    b.Property<int>("Capacity");
 
-                    b.Property<string>("City");
+                    b.Property<int?>("ClientId");
 
-                    b.Property<string>("Country");
-
-                    b.Property<string>("HomeNumber");
-
-                    b.Property<string>("Neighbourhood");
-
-                    b.Property<DateTime>("OrderDate");
-
-                    b.Property<string>("Street");
+                    b.Property<DateTime>("DateOfPurchase");
 
                     b.Property<double>("TotalPrice");
 
-                    b.Property<int>("UserId");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("ClientId");
 
                     b.ToTable("PurchaseOrders");
                 });
@@ -148,6 +137,8 @@ namespace BigOferta.API.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
+                    b.Property<string>("CardNumber");
+
                     b.Property<string>("City");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -158,6 +149,8 @@ namespace BigOferta.API.Migrations
                     b.Property<DateTime>("Created");
 
                     b.Property<DateTime>("DateOfBirth");
+
+                    b.Property<string>("District");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256);
@@ -176,13 +169,21 @@ namespace BigOferta.API.Migrations
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256);
 
+                    b.Property<string>("Number");
+
                     b.Property<string>("PasswordHash");
 
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
 
+                    b.Property<int>("ReputationGrade");
+
                     b.Property<string>("SecurityStamp");
+
+                    b.Property<string>("State");
+
+                    b.Property<string>("Street");
 
                     b.Property<bool>("TwoFactorEnabled");
 
@@ -207,7 +208,7 @@ namespace BigOferta.API.Migrations
 
                     b.Property<int>("OfferId");
 
-                    b.Property<int>("RequestedAmount");
+                    b.Property<int>("Amount");
 
                     b.HasKey("UserId", "OfferId");
 
@@ -313,7 +314,7 @@ namespace BigOferta.API.Migrations
             modelBuilder.Entity("BigOferta.API.Models.Photo", b =>
                 {
                     b.HasOne("BigOferta.API.Models.Offer", "Offer")
-                        .WithMany("Album")
+                        .WithMany("Photos")
                         .HasForeignKey("OfferId");
 
                     b.HasOne("BigOferta.API.Models.User", "User")
@@ -321,23 +322,22 @@ namespace BigOferta.API.Migrations
                         .HasForeignKey("BigOferta.API.Models.Photo", "UserId");
                 });
 
-            modelBuilder.Entity("BigOferta.API.Models.PurchaseOrder", b =>
+            modelBuilder.Entity("BigOferta.API.Models.PurchaseOrder<BigOferta.API.Models.UserOffer>", b =>
                 {
-                    b.HasOne("BigOferta.API.Models.User", "User")
-                        .WithOne("PurchaseOrder")
-                        .HasForeignKey("BigOferta.API.Models.PurchaseOrder", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                    b.HasOne("BigOferta.API.Models.User", "Client")
+                        .WithMany()
+                        .HasForeignKey("ClientId");
                 });
 
             modelBuilder.Entity("BigOferta.API.Models.UserOffer", b =>
                 {
                     b.HasOne("BigOferta.API.Models.Offer", "Offer")
-                        .WithMany("InterestedUsers")
+                        .WithMany("Interesteds")
                         .HasForeignKey("OfferId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("BigOferta.API.Models.User", "User")
-                        .WithMany("OffersCart")
+                        .WithMany("CartOffers")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
