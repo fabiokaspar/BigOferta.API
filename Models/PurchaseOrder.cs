@@ -13,17 +13,15 @@ namespace BigOferta.API.Models
         public double TotalPrice { get; set; } = 0.0;
         public virtual User Client { get; set; }
         
-        // [ForeignKey("ClientId")]
-        // public int ClientId { get; set; }
-    
-        // public PurchaseOrder(T item)
-        // {
-        //     this.Add(item);
-        // }
+        [ForeignKey("ClientId")]
+        public int ClientId { get; set; }
+
+
         public void confirmPurchaseOrder()
         {
             DateOfPurchase = DateTime.Now;
-            
+            TotalPrice = 0.0;
+
             foreach(T item in this)
             {
                 Offer offer = (item as UserOffer).Offer;
@@ -33,12 +31,10 @@ namespace BigOferta.API.Models
 
         public void finalizePurchaseOrder()
         {
-            if (this.Any())
+            if (this.Count > 0)
             {
-                this.Clear();
+                this.RemoveAll(item => (item as UserOffer).UserId == ClientId);
             }
-
-            TotalPrice = 0.0;
         }
 
     }

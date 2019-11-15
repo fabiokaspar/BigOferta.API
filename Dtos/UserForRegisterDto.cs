@@ -11,21 +11,15 @@ namespace BigOferta.API.Dtos
 
         [Required]
         [StringLength(50, MinimumLength=6, ErrorMessage="O nome de usuário deve conter entre 6 e 50 caracteres")]
-        public string Username { get; set; }
+        public string UserName { get; set; }
         
         [Required]
         [StringLength(50, MinimumLength=6, ErrorMessage="A senha deve conter entre 6 e 50 caracteres")]
         public string Password { get; set; }
-        
-        // [Required]
-        public DateTime DateOfBirth { get; set; }
-        
-        // [Required]
-        public string City { get; set; }
-        
-        // [Required]
-        public string Country { get; set; }
 
+        [EmailAddress]
+        public string Email { get; set; }
+        
         public DateTime Created { get; set; }
 
         public UserForRegisterDto()

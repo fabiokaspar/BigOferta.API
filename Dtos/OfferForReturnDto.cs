@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using BigOferta.API.Models;
 
-namespace BigOferta.API.Models
+namespace BigOferta.API.Dtos
 {
-    public class Offer
+    public class OfferForReturnDto
     {
         public int Id { get; set; }
         public string Category { get; set; }
@@ -13,12 +14,6 @@ namespace BigOferta.API.Models
         public bool IsHanked { get; set; }
         public string ComoUsar { get; set; }
         public string OndeFica { get; set; }
-
         public virtual ICollection<Photo> Photos { get; set; }
-        
-        // users que adicionaram a oferta ao seu carrinho
-        public virtual ICollection<UserOffer> Interesteds { get; set; }
-        
-        public virtual ICollection<Message> Feedbacks { get; set; }
     }
 }
