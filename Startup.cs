@@ -18,6 +18,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.CookiePolicy;
 
 namespace BigOferta.API
 {
@@ -38,6 +41,11 @@ namespace BigOferta.API
 
         public void ConfigureProductionServices(IServiceCollection services)
         {
+            services.AddDbContext<DataContext>(x =>
+            {
+                // x.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
+                x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
             ConfigureServices(services);
         }
 
@@ -71,7 +79,7 @@ namespace BigOferta.API
                         ValidateAudience = false
                     };
                 });
-
+           
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddJsonOptions(opt =>
@@ -81,6 +89,7 @@ namespace BigOferta.API
 
             services.AddCors();
             services.AddTransient<Seed>();
+            services.AddScoped<DatingRepository>();
             services.AddAutoMapper(typeof(Startup));
         }
 
@@ -94,7 +103,7 @@ namespace BigOferta.API
             else
             {
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                // app.UseHsts();
+                //app.UseHsts();
             }
 
             var scope = app.ApplicationServices.CreateScope();
@@ -107,12 +116,21 @@ namespace BigOferta.API
                 context.Database.Migrate();
                 Seed.SeedUsers(userManager, roleManager);
             }
-
             seeder.SeedOffers();
 
+            // app.UseDeveloperExceptionPage();
             // app.UseHttpsRedirection();
+
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
+            // app.UseDefaultFiles();
+            // app.UseStaticFiles();
+            // app.UseMvc(routes => {
+            //     routes.MapSpaFallbackRoute(
+            //         name: "spa-fallback",
+            //         defaults: new {controller = "Fallback", action = "Index"}
+            //     );
+            // });
             app.UseMvc();
         }
     }
