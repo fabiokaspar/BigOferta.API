@@ -1,197 +1,201 @@
 [
   {
-    "Category": "diversão",
-    "Title": "cillum consequat eu",
-    "Description": "Ipsum eu consectetur eiusmod eu nostrud dolore sunt.",
-    "Advertiser": "quis",
-    "Price": 71.44,
-    "IsHanked": false,
-    "Photos": [
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+24",
-        "IsMain": true
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+17",
-        "IsMain": false
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+27",
-        "IsMain": true
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+33",
-        "IsMain": false
-      }
-    ]
-  },
-  {
-    "Category": "diversão",
-    "Title": "ad duis",
-    "Description": "Proident est anim ad esse consectetur.",
-    "Advertiser": "qui culpa",
-    "Price": 61.38,
-    "IsHanked": false,
-    "Photos": [
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+18",
-        "IsMain": false
-      }
-    ]
-  },
-  {
     "Category": "restaurantes",
-    "Title": "nostrud cillum deserunt",
-    "Description": "Ipsum nisi nulla nulla eiusmod consectetur.",
-    "Advertiser": "labore",
-    "Price": 73.76,
-    "IsHanked": false,
-    "Photos": [
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+9",
-        "IsMain": true
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+37",
-        "IsMain": true
-      }
-    ]
-  },
-  {
-    "Category": "restaurantes",
-    "Title": "ut adipisicing",
-    "Description": "Quis do consectetur ut esse anim consequat.",
-    "Advertiser": "proident occaecat",
-    "Price": 39.99,
-    "IsHanked": false,
-    "Photos": [
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+49",
-        "IsMain": true
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+14",
-        "IsMain": false
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+27",
-        "IsMain": false
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+44",
-        "IsMain": false
-      }
-    ]
-  },
-  {
-    "Category": "diversão",
-    "Title": "consectetur sint",
-    "Description": "Reprehenderit do deserunt irure proident mollit reprehenderit dolor ad in commodo anim eu.",
-    "Advertiser": "laborum laboris",
-    "Price": 59.2,
-    "IsHanked": false,
-    "Photos": [
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+19",
-        "IsMain": false
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+47",
-        "IsMain": false
-      }
-    ]
-  },
-  {
-    "Category": "restaurantes",
-    "Title": "incididunt laboris",
-    "Description": "Lorem reprehenderit deserunt sit nisi et fugiat nostrud laborum proident Lorem.",
-    "Advertiser": "exercitation",
-    "Price": 17.14,
+    "Title": "laborum pariatur pariatur",
+    "Description": "Laborum deserunt minim tempor officia adipisicing.",
+    "Advertiser": "officia ad",
+    "Price": 57.59,
     "IsHanked": true,
-    "Photos": [
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+19",
-        "IsMain": false
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+36",
-        "IsMain": true
-      }
-    ]
-  },
-  {
-    "Category": "diversão",
-    "Title": "tempor sit commodo",
-    "Description": "Do incididunt ex cupidatat sunt reprehenderit irure voluptate dolor qui elit tempor exercitation velit.",
-    "Advertiser": "aliquip laborum",
-    "Price": 33.31,
-    "IsHanked": false,
-    "Photos": [
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+42",
-        "IsMain": true
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+35",
-        "IsMain": false
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+3",
-        "IsMain": false
-      }
-    ]
-  },
-  {
-    "Category": "diversão",
-    "Title": "consequat cupidatat",
-    "Description": "Duis dolor amet laborum cupidatat duis elit quis nisi incididunt duis reprehenderit exercitation.",
-    "Advertiser": "irure aliqua",
-    "Price": 31.17,
-    "IsHanked": false,
-    "Photos": [
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+17",
-        "IsMain": true
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+10",
-        "IsMain": false
-      }
-    ]
-  },
-  {
-    "Category": "diversão",
-    "Title": "laboris sit velit voluptate",
-    "Description": "Labore ullamco cupidatat officia adipisicing labore nulla eu pariatur aliquip nostrud officia labore.",
-    "Advertiser": "adipisicing dolor",
-    "Price": 80.22,
-    "IsHanked": true,
-    "Photos": [
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+5",
-        "IsMain": true
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+16",
-        "IsMain": true
-      },
-      {
-        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+31",
-        "IsMain": false
-      }
-    ]
-  },
-  {
-    "Category": "diversão",
-    "Title": "occaecat tempor",
-    "Description": "Consectetur enim velit in officia eu aliquip esse.",
-    "Advertiser": "enim ut",
-    "Price": 95.97,
-    "IsHanked": true,
+    "ComoUsar": "Não é necessário agendar. Sujeito à fila.",
+    "OndeFica": "Avenida Lúcio Rodrigues Alves, 33, Fortaleza - CE",
     "Photos": [
       {
         "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+29",
         "IsMain": false
+      },
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+7",
+        "IsMain": true
+      }
+    ]
+  },
+  {
+    "Category": "diversão",
+    "Title": "ipsum anim qui",
+    "Description": "Qui ad sit cupidatat eiusmod sit duis aliqua.",
+    "Advertiser": "non veniam",
+    "Price": 48.98,
+    "IsHanked": false,
+    "ComoUsar": "Não é necessário agendar. Sujeito à fila.",
+    "OndeFica": "Avenida José de Oliveira, 550, Campo Grande - MS",
+    "Photos": [
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+40",
+        "IsMain": true
+      }
+    ]
+  },
+  {
+    "Category": "restaurantes",
+    "Title": "esse anim",
+    "Description": "Sit dolor excepteur fugiat culpa incididunt officia veniam cillum.",
+    "Advertiser": "velit ex",
+    "Price": 91.69,
+    "IsHanked": false,
+    "ComoUsar": "Necessário agendar com no mínimo 48 horas de antecedência",
+    "OndeFica": "Avenida Júlia Abrão, 77, São Paulo - SP",
+    "Photos": [
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+8",
+        "IsMain": true
+      },
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+42",
+        "IsMain": false
+      }
+    ]
+  },
+  {
+    "Category": "restaurantes",
+    "Title": "ea labore",
+    "Description": "Qui ex occaecat Lorem in.",
+    "Advertiser": "qui excepteur",
+    "Price": 88.4,
+    "IsHanked": true,
+    "ComoUsar": "Não é necessário agendar. Sujeito à fila.",
+    "OndeFica": "Rua Francisco Mendes, 1000, Rio de Janeiro - RJ",
+    "Photos": [
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+5",
+        "IsMain": false
+      },
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+39",
+        "IsMain": true
+      },
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+17",
+        "IsMain": false
+      },
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+9",
+        "IsMain": true
+      }
+    ]
+  },
+  {
+    "Category": "diversão",
+    "Title": "exercitation adipisicing",
+    "Description": "Ullamco adipisicing deserunt commodo ut dolor cupidatat et.",
+    "Advertiser": "fugiat",
+    "Price": 96.72,
+    "IsHanked": true,
+    "ComoUsar": "Necessário agendar com no mínimo 48 horas de antecedência",
+    "OndeFica": "Avenida José de Oliveira, 550, Campo Grande - MS",
+    "Photos": [
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+3",
+        "IsMain": false
+      },
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+13",
+        "IsMain": false
+      },
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+6",
+        "IsMain": true
+      }
+    ]
+  },
+  {
+    "Category": "restaurantes",
+    "Title": "dolor eiusmod labore",
+    "Description": "Dolor qui consectetur labore sunt et dolor duis anim.",
+    "Advertiser": "proident",
+    "Price": 57.33,
+    "IsHanked": false,
+    "ComoUsar": "Válido de segunda a sábado das 12h as 23h. Necessário agendamento prévio",
+    "OndeFica": "Rua Francisco Mendes, 1000, Rio de Janeiro - RJ",
+    "Photos": [
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+39",
+        "IsMain": true
+      }
+    ]
+  },
+  {
+    "Category": "restaurantes",
+    "Title": "voluptate enim ex",
+    "Description": "Velit minim nulla pariatur veniam pariatur eu ut ex pariatur qui amet ad aute.",
+    "Advertiser": "elit",
+    "Price": 24.35,
+    "IsHanked": true,
+    "ComoUsar": "Não é necessário agendar. Sujeito à fila.",
+    "OndeFica": "Avenida Júlia Abrão, 77, São Paulo - SP",
+    "Photos": [
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+30",
+        "IsMain": false
+      },
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+40",
+        "IsMain": true
+      },
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+50",
+        "IsMain": true
+      }
+    ]
+  },
+  {
+    "Category": "diversão",
+    "Title": "ipsum excepteur culpa",
+    "Description": "Exercitation laborum culpa cupidatat duis dolore proident id nulla laborum dolore in sunt.",
+    "Advertiser": "labore nisi",
+    "Price": 47.29,
+    "IsHanked": true,
+    "ComoUsar": "Necessário agendar com no mínimo 48 horas de antecedência",
+    "OndeFica": "Estrada Maria das Graças, 12, Salvador - BA",
+    "Photos": [
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+19",
+        "IsMain": false
+      },
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+19",
+        "IsMain": true
+      }
+    ]
+  },
+  {
+    "Category": "restaurantes",
+    "Title": "quis aliquip reprehenderit consequat",
+    "Description": "Magna elit et ipsum irure.",
+    "Advertiser": "aliqua",
+    "Price": 33.04,
+    "IsHanked": true,
+    "ComoUsar": "Válido de segunda a quinta das 12h as 23h",
+    "OndeFica": "Avenida José de Oliveira, 550, Campo Grande - MS",
+    "Photos": [
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+15",
+        "IsMain": true
+      }
+    ]
+  },
+  {
+    "Category": "diversão",
+    "Title": "deserunt est",
+    "Description": "Voluptate cillum elit consequat eiusmod dolor esse sit excepteur.",
+    "Advertiser": "magna",
+    "Price": 49.03,
+    "IsHanked": true,
+    "ComoUsar": "Necessário agendar com no mínimo 48 horas de antecedência",
+    "OndeFica": "Avenida João da Silva, 255, São Paulo - SP",
+    "Photos": [
+      {
+        "Url": "https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+27",
+        "IsMain": true
       }
     ]
   }

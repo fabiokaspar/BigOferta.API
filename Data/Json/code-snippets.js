@@ -76,6 +76,27 @@
     Advertiser: '{{lorem(integer(1, 2), "words")}}',
     Price: '{{floating(10, 100, 2)}}',
     IsHanked: '{{bool()}}',
+    ComoUsar: function (tags) {
+      var dicas = ["Não é necessário agendar",
+                   "Válido de segunda a quinta das 12h as 23h",
+                   "Necessário agendar com no mínimo 48 horas de antecedência",
+                    "Válido de segunda a sábado das 12h as 23h. Necessário agendamento prévio",
+                   "Não é necessário agendar. Sujeito à fila."
+                   
+                  ];
+      return dicas[tags.integer(0, dicas.length - 1)];
+    },
+    OndeFica: function (tags) {
+      var locais =	[
+        				"Avenida João da Silva, 255, São Paulo - SP",
+						"Rua Francisco Mendes, 1000, Rio de Janeiro - RJ",
+        				"Avenida Lúcio Rodrigues Alves, 33, Fortaleza - CE",
+        				"Avenida José de Oliveira, 550, Campo Grande - MS",
+        				"Avenida Júlia Abrão, 77, São Paulo - SP",
+        				"Estrada Maria das Graças, 12, Salvador - BA"
+      				];
+      return locais[tags.integer(0, locais.length - 1)];
+    },
     Photos: [
       '{{repeat(integer(1, 4))}}',
       {
