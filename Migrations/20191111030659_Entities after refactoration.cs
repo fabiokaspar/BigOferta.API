@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BigOferta.API.Migrations
 {
-    public partial class RefactoredEntities : Migration
+    public partial class Entitiesafterrefactoration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -70,7 +70,9 @@ namespace BigOferta.API.Migrations
                     Description = table.Column<string>(nullable: true),
                     Advertiser = table.Column<string>(nullable: true),
                     Price = table.Column<double>(nullable: false),
-                    IsHanked = table.Column<bool>(nullable: false)
+                    IsHanked = table.Column<bool>(nullable: false),
+                    ComoUsar = table.Column<string>(nullable: true),
+                    OndeFica = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -192,7 +194,7 @@ namespace BigOferta.API.Migrations
                     Capacity = table.Column<int>(nullable: false),
                     DateOfPurchase = table.Column<DateTime>(nullable: false),
                     TotalPrice = table.Column<double>(nullable: false),
-                    ClientId = table.Column<int>(nullable: true)
+                    ClientId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -202,7 +204,7 @@ namespace BigOferta.API.Migrations
                         column: x => x.ClientId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -253,13 +255,13 @@ namespace BigOferta.API.Migrations
                         column: x => x.OfferId,
                         principalTable: "Offers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Photos_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

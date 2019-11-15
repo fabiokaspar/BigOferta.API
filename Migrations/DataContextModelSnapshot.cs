@@ -47,9 +47,13 @@ namespace BigOferta.API.Migrations
 
                     b.Property<string>("Category");
 
+                    b.Property<string>("ComoUsar");
+
                     b.Property<string>("Description");
 
                     b.Property<bool>("IsHanked");
+
+                    b.Property<string>("OndeFica");
 
                     b.Property<double>("Price");
 
@@ -92,7 +96,7 @@ namespace BigOferta.API.Migrations
 
                     b.Property<int>("Capacity");
 
-                    b.Property<int?>("ClientId");
+                    b.Property<int>("ClientId");
 
                     b.Property<DateTime>("DateOfPurchase");
 
@@ -313,18 +317,21 @@ namespace BigOferta.API.Migrations
                 {
                     b.HasOne("BigOferta.API.Models.Offer", "Offer")
                         .WithMany("Photos")
-                        .HasForeignKey("OfferId");
+                        .HasForeignKey("OfferId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("BigOferta.API.Models.User", "User")
                         .WithOne("ProfilePhoto")
-                        .HasForeignKey("BigOferta.API.Models.Photo", "UserId");
+                        .HasForeignKey("BigOferta.API.Models.Photo", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("BigOferta.API.Models.PurchaseOrder<BigOferta.API.Models.UserOffer>", b =>
                 {
                     b.HasOne("BigOferta.API.Models.User", "Client")
                         .WithMany()
-                        .HasForeignKey("ClientId");
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("BigOferta.API.Models.UserOffer", b =>

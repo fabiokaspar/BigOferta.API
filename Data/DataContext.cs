@@ -50,19 +50,18 @@ namespace BigOferta.API.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Offer>()
-                .HasMany(o => o.Photos)
+                .HasMany<Photo>(o => o.Photos)
                 .WithOne(p => p.Offer)
-                .HasForeignKey(p => p.OfferId);
+                .HasForeignKey(p => p.OfferId)
+                .OnDelete(DeleteBehavior.Cascade);
+
 
             builder.Entity<User>()
                 .HasOne(u => u.ProfilePhoto)
                 .WithOne(p => p.User)
-                .HasForeignKey<Photo>(p => p.UserId);
-      
-            // builder.Entity<PurchaseOrder<UserOffer>>()
-            //     .HasOne(po => po.Client)
-            //     .WithOne(u => u.CartOffers)
-            //     .HasForeignKey<PurchaseOrder<UserOffer>>(po => po.ClientId);
+                .HasForeignKey<Photo>(p => p.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
 
             builder.Entity<UserOffer>(userOffer => {
                 userOffer.HasKey(uf => new { uf.UserId, uf.OfferId });
