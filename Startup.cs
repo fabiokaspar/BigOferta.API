@@ -117,23 +117,25 @@ namespace BigOferta.API
             {
                 context.Database.Migrate();
                 Seed.SeedUsers(userManager, roleManager);
+                seeder.SeedOffers();
             }
+            
             // seeder.SeedOffers();
 
-            app.UseDeveloperExceptionPage();
-            app.UseHttpsRedirection();
+            // app.UseDeveloperExceptionPage();
+            // app.UseHttpsRedirection();
 
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
-            app.UseMvc(routes => {
-                routes.MapSpaFallbackRoute(
-                    name: "spa-fallback",
-                    defaults: new {controller = "Fallback", action = "Index"}
-                );
-            });
-            // app.UseMvc();
+            // app.UseDefaultFiles();
+            // app.UseStaticFiles();
+            // app.UseMvc(routes => {
+            //     routes.MapSpaFallbackRoute(
+            //         name: "spa-fallback",
+            //         defaults: new {controller = "Fallback", action = "Index"}
+            //     );
+            // });
+            app.UseMvc();
         }
     }
 }
