@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using BigOferta.API.Models;
 
 namespace BigOferta.API.Dtos
 {
-    public class OfferForReturnDto
+    public class OfferForRegisterDto
     {
         public int Id { get; set; }
         public string Category { get; set; }

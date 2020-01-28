@@ -94,3 +94,27 @@ values
 'Necessário agendar com no mínimo 48 horas de antecedência',
 'Avenida João da Silva, 255, São Paulo - SP')
 
+
+insert into Offers (Category, Title, Description, Advertiser, Price, IsHanked, ComoUsar, OndeFica)
+values 
+('diversão',
+'incididunt laborum',
+'Consequat dolore cillum cillum deserunt amet anim laboris ad commodo nostrud minim aute ut duis.',
+'sunt exercitation',
+37.09,
+0,
+'Não é necessário agendar, apenas pagar :)',
+'Avenida São João, 1010, Vila Nabucodonosor - RJ')
+
+
+insert into Offers (Category, Title, Description, Advertiser, Price, IsHanked, ComoUsar, OndeFica)
+values 
+('restaurantes',
+'Churrasco com chimarrão',
+'Carnes de primeira, chimarrão à vontade, churrascos feitos na hora, preços imbatíveis!',
+'Gaúchos',
+80.00,
+1,
+'Não é necessário agendar, exceto para reserva de jantar. Estacionamento gratuitos para clientes.',
+'Avenida Rio Grandense, 900, Vila dos Bois - RS')
+

@@ -66,7 +66,7 @@ namespace BigOferta.API.Controllers
 
             if (result.Succeeded)
             {
-                var userToReturn = _mapper.Map<UserForReturnDto>(userFromStore);
+                var userToReturn = _mapper.Map<UserForReturnDto>(await _repo.GetUser(userFromStore.Id));
 
                 return Ok(new
                 {
@@ -94,7 +94,7 @@ namespace BigOferta.API.Controllers
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(1),
+                Expires = DateTime.Now.AddHours(4),
                 SigningCredentials = creds
             };
 

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BigOferta.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191111030659_Entities after refactoration")]
-    partial class Entitiesafterrefactoration
+    [Migration("20191127121028_Adding width, height columns to Photo table")]
+    partial class AddingwidthheightcolumnstoPhototable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -71,6 +71,8 @@ namespace BigOferta.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("Height");
+
                     b.Property<bool>("IsMain");
 
                     b.Property<int?>("OfferId");
@@ -80,6 +82,8 @@ namespace BigOferta.API.Migrations
                     b.Property<string>("Url");
 
                     b.Property<int?>("UserId");
+
+                    b.Property<int>("Width");
 
                     b.HasKey("Id");
 

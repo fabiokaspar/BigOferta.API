@@ -10,6 +10,7 @@ namespace BigOferta.API.Helpers
     {
         public AutoMapperProfiles()
         {
+
             CreateMap<UserForRegisterDto, User>();
 
             CreateMap<UserForUpdateDto, User>();
@@ -19,26 +20,14 @@ namespace BigOferta.API.Helpers
                 .ForMember(dest => dest.CartOffers, opt => {
                     opt.MapFrom(src => src.ToList());
                 });
-                // .ForMember(dest => dest.TotalPrice, opt => {
-                //     opt.MapFrom(src => src.TotalPrice);
-                // })
-                // .ForMember(dest => dest.DateOfPurchase, opt => {
-                //     opt.MapFrom(src => src.DateOfPurchase);
-                // })
-                // .ForMember(dest => dest.Id, opt => {
-                //     opt.MapFrom(src => src.Id);
-                // });
 
-            CreateMap<User, UserForReturnDto>();
-                // .ForMember(dest => dest.Purchase, opt => {
-                //     opt.MapFrom(src => src.Id);
-                // })
-                // .ForMember(dest => dest.Purchase.ClientId, opt => {
-                //     opt.MapFrom(src => src.Id);
-                // })
-                // .ForMember(dest => dest.Purchase.CartOffers, opt => {
-                //     opt.MapFrom(src => src.CartOffers);
-                // });
+            CreateMap<PhotoForReturnDto, Photo>().ReverseMap();
+            CreateMap<PhotoForCreationDto, Photo>().ReverseMap();
+            CreateMap<PhotoForRemovingDto, Photo>().ReverseMap();
+
+            CreateMap<OfferForRegisterDto, Offer>().ReverseMap();
+                
+            CreateMap<User, UserForReturnDto>().ReverseMap();
 
             CreateMap<Offer, OfferForCartDto>()
                 .ForMember(dest => dest.OfferId, opt => {
@@ -47,10 +36,9 @@ namespace BigOferta.API.Helpers
                 .ForMember(dest => dest.PhotoUrl, opt => {
                     opt.MapFrom(src => src.Photos.FirstOrDefault(photo => photo.IsMain).Url);
                 });
+
             CreateMap<UserOffer, UserOfferForCartDto>().ReverseMap();
             CreateMap<Offer, OfferForReturnDto>().ReverseMap();
-
-            // CreateMap<List<Offer>, List<OfferForCartDto>>();
         }
     }
 }

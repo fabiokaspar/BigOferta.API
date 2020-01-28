@@ -102,7 +102,7 @@
       {
         Url: function(tag) 
         {
-          return 'https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+'+tag.integer(1, 50);
+          return 'https://via.placeholder.com/400x400/aaa/FFFFFF/?text=BIGOFERTA+'+tag.integer(1, 50);
         },
         IsMain: '{{bool()}}'
       }

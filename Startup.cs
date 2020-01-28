@@ -21,6 +21,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.CookiePolicy;
+using BigOferta.API.Helpers;
 
 namespace BigOferta.API
 {
@@ -88,6 +89,7 @@ namespace BigOferta.API
                 });
 
             services.AddCors();
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddTransient<Seed>();
             services.AddScoped<DatingRepository>();
             services.AddAutoMapper(typeof(Startup));
@@ -116,22 +118,22 @@ namespace BigOferta.API
                 context.Database.Migrate();
                 Seed.SeedUsers(userManager, roleManager);
             }
-            seeder.SeedOffers();
+            // seeder.SeedOffers();
 
-            // app.UseDeveloperExceptionPage();
-            // app.UseHttpsRedirection();
+            app.UseDeveloperExceptionPage();
+            app.UseHttpsRedirection();
 
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
-            // app.UseDefaultFiles();
-            // app.UseStaticFiles();
-            // app.UseMvc(routes => {
-            //     routes.MapSpaFallbackRoute(
-            //         name: "spa-fallback",
-            //         defaults: new {controller = "Fallback", action = "Index"}
-            //     );
-            // });
-            app.UseMvc();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+            app.UseMvc(routes => {
+                routes.MapSpaFallbackRoute(
+                    name: "spa-fallback",
+                    defaults: new {controller = "Fallback", action = "Index"}
+                );
+            });
+            // app.UseMvc();
         }
     }
 }

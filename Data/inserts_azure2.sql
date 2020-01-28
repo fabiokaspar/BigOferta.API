@@ -2,116 +2,116 @@
 
 DROP INDEX Photos.IX_Photos_UserId; 
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values 
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+29',
-0, 21, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+1',
+0, 1, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values 
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+7',
-1, 21, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+1',
+1, 1, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values 
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+40',
-1, 22, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+2',
+1, 2, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values 
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+42',
-0, 22, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+2',
+0, 2, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values 
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+8',
-1, 23, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+3',
+1, 3, null, 400, 200);
 
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values 
 (
-'https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+5',
-0, 24, null);
+'https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+4',
+0, 4, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+39',
-1, 24, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+4',
+1, 4, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+17',
-0, 24, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+4',
+0, 4, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+9',
-1, 24, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+4',
+1, 4, null, 400, 200);
 
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+3',
-0, 25, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+5',
+0, 5, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+13',
-0, 25, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+5',
+0, 5, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
+values
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+5',
+1, 5, null, 400, 200);
+
+
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
 ('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+6',
-1, 25, null);
+1, 6, null, 400, 200);
 
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+39',
-1, 26, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+6',
+1, 6, null, 400, 200);
 
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+39',
-1, 26, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+7',
+0, 7, null, 400, 200);
 
-
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+30',
-0, 27, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+7',
+1, 7, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+40',
-1, 27, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+7',
+1, 7, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+50',
-1, 27, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+8',
+0, 8, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+19',
-0, 28, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+8',
+1, 8, null, 400, 200);
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+19',
-1, 28, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+9',
+1, 9, null, 400, 200);
 
 
-insert into Photos (Url, IsMain, OfferId, UserId)
+insert into Photos (Url, IsMain, OfferId, UserId, Width, Height)
 values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+15',
-1, 29, null);
-
-
-insert into Photos (Url, IsMain, OfferId, UserId)
-values
-('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+27',
-1, 30, null);
+('https://via.placeholder.com/400x200/aaa/FFFFFF/?text=BIGOFERTA+1-',
+1, 10, null, 400, 200);
 

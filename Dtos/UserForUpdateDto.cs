@@ -6,6 +6,9 @@ namespace BigOferta.API.Dtos
 {
     public class UserForUpdateDto
     {
+        [StringLength(50, MinimumLength=3, ErrorMessage="O nome deve conter entre 3 e 50 caracteres")]
+        public string Name { get; set; }
+        
         [StringLength(50, MinimumLength=6, ErrorMessage="O nome de usuário deve conter entre 6 e 50 caracteres")]
         public string UserName { get; set; }
 

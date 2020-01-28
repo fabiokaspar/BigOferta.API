@@ -69,6 +69,8 @@ namespace BigOferta.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("Height");
+
                     b.Property<bool>("IsMain");
 
                     b.Property<int?>("OfferId");
@@ -78,6 +80,8 @@ namespace BigOferta.API.Migrations
                     b.Property<string>("Url");
 
                     b.Property<int?>("UserId");
+
+                    b.Property<int>("Width");
 
                     b.HasKey("Id");
 

@@ -1,9 +1,10 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BigOferta.API.Migrations
 {
-    public partial class Entitiesafterrefactoration : Migration
+    public partial class AddingwidthheightcolumnstoPhototable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,6 +13,8 @@ namespace BigOferta.API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(maxLength: 256, nullable: true),
@@ -27,6 +30,8 @@ namespace BigOferta.API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     UserName = table.Column<string>(maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
@@ -64,6 +69,8 @@ namespace BigOferta.API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     Category = table.Column<string>(nullable: true),
                     Title = table.Column<string>(nullable: true),
@@ -84,6 +91,8 @@ namespace BigOferta.API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     RoleId = table.Column<int>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
@@ -105,6 +114,8 @@ namespace BigOferta.API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     UserId = table.Column<int>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
@@ -190,6 +201,8 @@ namespace BigOferta.API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     Capacity = table.Column<int>(nullable: false),
                     DateOfPurchase = table.Column<DateTime>(nullable: false),
@@ -212,6 +225,8 @@ namespace BigOferta.API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     Content = table.Column<string>(nullable: true),
                     Posted = table.Column<DateTime>(nullable: false),
@@ -240,8 +255,12 @@ namespace BigOferta.API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn)
                         .Annotation("Sqlite:Autoincrement", true),
                     Url = table.Column<string>(nullable: true),
+                    Width = table.Column<int>(nullable: false),
+                    Height = table.Column<int>(nullable: false),
                     IsMain = table.Column<bool>(nullable: false),
                     PublicId = table.Column<string>(nullable: true),
                     OfferId = table.Column<int>(nullable: true),

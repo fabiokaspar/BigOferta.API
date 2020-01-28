@@ -39,7 +39,7 @@ namespace BigOferta.API.Controllers
             // userForReturnDto.Purchase = _mapper.Map<PurchaseOrderDto>(user);
             userForReturnDto.Purchase.ClientId = user.Id;
 
-            return Ok(user);
+            return Ok(userForReturnDto);
         }
 
         [HttpGet("{userId}/cart")]

@@ -20,7 +20,7 @@ namespace BigOferta.API.Dtos
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string CardNumber { get; set; }
-        public string ProfilePhoto { get; set; }
+        public virtual PhotoForReturnDto ProfilePhoto { get; set; }
         public virtual PurchaseOrderDto Purchase { get; set; }
     }
 }
